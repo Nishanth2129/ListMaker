@@ -12,7 +12,7 @@ class TodoListViewController : UITableViewController
 {
 
     // Declaring the array
-    let itemArray = ["Steve Jobs","Elon Musk","Jeff Bezos","Mark ZuckerBerg"]
+    var itemArray = ["Steve Jobs","Elon Musk","Jeff Bezos","Mark ZuckerBerg"]
     override func viewDidLoad() {
         super.viewDidLoad()
      }
@@ -54,5 +54,35 @@ class TodoListViewController : UITableViewController
         // to deselect the tableview once its selectted or to animate it
         tableView.deselectRow(at:indexPath, animated: true)
     }
+    
+    //MARK :- Add New Items
+    @IBAction func addButtonPressed(_ sender: UIBarButtonItem)
+    {
+        var textField = UITextField()
+        
+        let alert = UIAlertController(title: "Add New List Item", message: "", preferredStyle:.alert)
+        
+        let action = UIAlertAction(title: "Add New Item", style: .default) { (action) in
+            
+            // What will happen if the user Clicks the item n our UIalert
+            self.itemArray.append(textField.text!)
+            
+            // to reload and reflect the data in the TableView
+            
+            self.tableView.reloadData()
+        }
+        
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "Create New Item "
+            textField = alertTextField
+         }
+        
+        
+        alert.addAction(action)
+        
+        present(alert, animated: true, completion: nil)
+       
+    }
+  
  }
 
