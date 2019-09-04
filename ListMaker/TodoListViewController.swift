@@ -13,8 +13,16 @@ class TodoListViewController : UITableViewController
 
     // Declaring the array
     var itemArray = ["Steve Jobs","Elon Musk","Jeff Bezos","Mark ZuckerBerg"]
+    
+    let defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let items = defaults.array(forKey: "ToDoListArray") as? [String]
+        {
+            itemArray = items
+        }
      }
 
    // MARK - TableView DataSource Methods
@@ -68,6 +76,8 @@ class TodoListViewController : UITableViewController
             self.itemArray.append(textField.text!)
             
             // to reload and reflect the data in the TableView
+            
+            self.defaults.set(self.itemArray, forKey: "ToDoListArray")
             
             self.tableView.reloadData()
         }
