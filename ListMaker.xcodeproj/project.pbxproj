@@ -14,6 +14,7 @@
 		0461AF74230DCC0A002C7B15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0461AF73230DCC0A002C7B15 /* Assets.xcassets */; };
 		0461AF77230DCC0A002C7B15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0461AF75230DCC0A002C7B15 /* LaunchScreen.storyboard */; };
 		049588F1232B7D6700803817 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049588F0232B7D6700803817 /* CategoryViewController.swift */; };
+		9693AAEAFFACBE71719E9C6B /* Pods_ListMaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ECE00512346FA2E69434904 /* Pods_ListMaker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		0461AF76230DCC0A002C7B15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0461AF78230DCC0A002C7B15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		049588F0232B7D6700803817 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		2ECE00512346FA2E69434904 /* Pods_ListMaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ListMaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49FE5E4E5032472FF12DF0FB /* Pods-ListMaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListMaker.release.xcconfig"; path = "Target Support Files/Pods-ListMaker/Pods-ListMaker.release.xcconfig"; sourceTree = "<group>"; };
+		D1F00528AFE0ED2BF12D7E52 /* Pods-ListMaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListMaker.debug.xcconfig"; path = "Target Support Files/Pods-ListMaker/Pods-ListMaker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9693AAEAFFACBE71719E9C6B /* Pods_ListMaker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				0461AF6B230DCC09002C7B15 /* ListMaker */,
 				0461AF6A230DCC09002C7B15 /* Products */,
+				20773CC021495300846A0617 /* Pods */,
+				217F930932E18D9CE876009A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +109,24 @@
 			path = " Supporting Files";
 			sourceTree = "<group>";
 		};
+		20773CC021495300846A0617 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D1F00528AFE0ED2BF12D7E52 /* Pods-ListMaker.debug.xcconfig */,
+				49FE5E4E5032472FF12DF0FB /* Pods-ListMaker.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		217F930932E18D9CE876009A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2ECE00512346FA2E69434904 /* Pods_ListMaker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,9 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0461AF7B230DCC0A002C7B15 /* Build configuration list for PBXNativeTarget "ListMaker" */;
 			buildPhases = (
+				68A05879AD08AB2B4BC856F7 /* [CP] Check Pods Manifest.lock */,
 				0461AF65230DCC09002C7B15 /* Sources */,
 				0461AF66230DCC09002C7B15 /* Frameworks */,
 				0461AF67230DCC09002C7B15 /* Resources */,
+				41B80639A2D8A35DFEDD04C5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,6 +194,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		41B80639A2D8A35DFEDD04C5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ListMaker/Pods-ListMaker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ListMaker/Pods-ListMaker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ListMaker/Pods-ListMaker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68A05879AD08AB2B4BC856F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ListMaker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0461AF65230DCC09002C7B15 /* Sources */ = {
@@ -320,6 +389,7 @@
 		};
 		0461AF7C230DCC0A002C7B15 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1F00528AFE0ED2BF12D7E52 /* Pods-ListMaker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -339,6 +409,7 @@
 		};
 		0461AF7D230DCC0A002C7B15 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49FE5E4E5032472FF12DF0FB /* Pods-ListMaker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
